@@ -20,8 +20,6 @@ def rasp_day(day):
         records[i].append(cursor.fetchall()[0][0])
     table = ('%s\n_________________________\n' % day)
     conn.commit()
-    cursor.close()
-    conn.close()
     if records:
         for i in range(len(records)):
             # table += ('%s | %s | %s\n' % (records[i][4], records[i][2], records[i][3])) на случай выхода на очное
@@ -58,8 +56,6 @@ def rasp_week(week_choose):
                 cursor.execute("SELECT full_name FROM sch.teacher WHERE subject = '%s'" % str(records[j][2]))
                 records[j].append(cursor.fetchall()[0][0])
                 conn.commit()
-                cursor.close()
-                conn.close()
             table += ('%s\n_________________________\n' % days[i])
             if records:
                 for f in range(len(records)):
@@ -83,8 +79,6 @@ def rasp_week(week_choose):
                 cursor.execute("SELECT full_name FROM sch.teacher WHERE subject = '%s'" % str(records[j][2]))
                 records[j].append(cursor.fetchall()[0][0])
                 conn.commit()
-                cursor.close()
-                conn.close()
             table += ('%s\n_________________________\n' % days[i])
             if records:
                 for f in range(len(records)):
