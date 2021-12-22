@@ -22,4 +22,4 @@ from qr_func import qr_create, random_pass
 
 ## Conclusion 
 
-Using the PyTelegramBot Api, psycopg2, you can write a bot that send schedule of the university activities For each day or for the whole week
+Using the PyTelegramBot Api you can write a bot that send or generate for you some information
